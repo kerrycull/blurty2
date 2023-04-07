@@ -99,8 +99,6 @@ async function startServer() {
       const news_id = req.params.news_id;
       const collection = db.collection(collectionName);
 
-      //console.log(req.params.news_id);
-
       // Find the post with the given news_id and increment its upvotes by 1
       const result = await collection.updateOne(
         { news_id: parseInt(req.params.news_id) },
